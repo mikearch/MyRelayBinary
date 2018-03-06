@@ -20,7 +20,7 @@ class MyRelayBinary
 		void off();
 		bool status();
 		
-	private;
+	private:
 		int _pin;
 		bool _status;
 		int _wireMode;
