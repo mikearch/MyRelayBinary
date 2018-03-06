@@ -17,7 +17,6 @@ MyRelayBinary::MyRelayBinary(int pin, int wireMode)
        _pin = pin;
        _wiringMode = wiringMode;
        bool _status;
-       int _pinstatus;
 
   }
   
@@ -32,9 +31,9 @@ MyRelayBinary::MyRelayBinary(int pin, int wireMode)
           }
           
           else {
-                 digitalWrite(_pin, HIGH); //normally closed HIGH will connect power
+                 digitalWrite(_pin, HIGH); //normally closed HIGH will connect power  
           }
-        
+          _status = TRUE;
    }
    
    void  MyRelayBinary::off()
@@ -46,9 +45,11 @@ MyRelayBinary::MyRelayBinary(int pin, int wireMode)
           else {
                  digitalWrite(_pin, LOW); //normally closed LOW will connect power
           }
+          _status = FALSE;
    }
    
-   void  MyRelayBinary::status()
+   bool  MyRelayBinary::status()
    {
-          digitalRead(_pin);
+         return _status;
+                 
    }
