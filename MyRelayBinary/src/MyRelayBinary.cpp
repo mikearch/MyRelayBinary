@@ -9,7 +9,7 @@ Created by Michael S. Tomasik  March 5, 2018
 */
 
 #include "Arduino.h"
-"inllude "MyRelayBinary.h"
+#include "MyRelayBinary.h"
 
 MyRelayBinary::MyRelayBinary(int pin, int wireMode)
 {
