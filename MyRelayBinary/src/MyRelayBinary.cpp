@@ -33,7 +33,7 @@ MyRelayBinary::MyRelayBinary(int pin, int wireMode)
           else {
                  digitalWrite(_pin, HIGH); //normally closed HIGH will connect power  
           }
-          _status = TRUE;
+          _status = true;    //changes variable to true after relay connects power
    }
    
    void  MyRelayBinary::off()
@@ -45,7 +45,7 @@ MyRelayBinary::MyRelayBinary(int pin, int wireMode)
           else {
                  digitalWrite(_pin, LOW); //normally closed LOW will connect power
           }
-          _status = FALSE;
+          _status = false;  //changes variable after relay disconnects power
    }
    
    bool  MyRelayBinary::status()
