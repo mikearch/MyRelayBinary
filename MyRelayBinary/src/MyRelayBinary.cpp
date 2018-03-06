@@ -16,8 +16,7 @@ MyRelayBinary::MyRelayBinary(int pin, int wireMode)
        pinMode(pin, OUTPUT);
        _pin = pin;
        _wiringMode = wiringMode;
-       bool _status;
-
+   
   }
   
   void  MyRelayBinary::begin()
