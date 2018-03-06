@@ -1,3 +1,15 @@
+/*
+MyRelayBinary.h  - Library for managing multiple relays that are wired either NO or NC.
+The methods void on() and void off() take in consideration the NO or NC wiring state and 
+connect power either ON (void on()) or OFF (void off())
+Created by Michael S. Tomasik March 5, 2018
+*/
+
+#ifndef MyRelayBinary_h
+#define MyRelayBindary_h
+
+#include "Arduino.h"
+
 class MyRelayBinary
 {
 	public:
@@ -12,3 +24,4 @@ class MyRelayBinary
 		int _pin;
 		boul _status;
 	};
+#endif
