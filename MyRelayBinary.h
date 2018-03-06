@@ -6,7 +6,7 @@ Created by Michael S. Tomasik March 5, 2018
 */
 
 #ifndef MyRelayBinary_h
-#define MyRelayBindary_h
+#define MyRelayBinary_h
 
 #include "Arduino.h"
 
