@@ -13,9 +13,12 @@ Created by Michael S. Tomasik  March 5, 2018
 
 MyRelayBinary::MyRelayBinary(int pin, int wireMode)
 {
-  pinMode(pin, OUTPUT);
-  _pin = pin
-  _wiringMode = wiringMode;
+       pinMode(pin, OUTPUT);
+       _pin = pin;
+       _wiringMode = wiringMode;
+       bool _status;
+       int _pinstatus;
+
   }
   
   void  MyRelayBinary::begin()
@@ -24,12 +27,28 @@ MyRelayBinary::MyRelayBinary(int pin, int wireMode)
   
    void  MyRelayBinary::on()
    {
+          if(_wiringMode == 0){
+                 digitalWrite(_pin, LOW); // normally open LOW will turn connect power
+          }
+          
+          else {
+                 digitalWrite(_pin, HIGH); //normally closed HIGH will connect power
+          }
+        
    }
    
    void  MyRelayBinary::off()
    {
+          if(_wiringMode == 0){
+                 digitalWrite(_pin, HIGH); // normally open HIGH will disconnect power
+          }
+          
+          else {
+                 digitalWrite(_pin, LOW); //normally closed LOW will connect power
+          }
    }
    
    void  MyRelayBinary::status()
    {
+          digitalRead(_pin);
    }
