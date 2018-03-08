@@ -13,7 +13,6 @@ Created by Michael S. Tomasik  March 5, 2018
 
 MyRelayBinary::MyRelayBinary(int pin, int wireMode)
 {
-       pinMode(pin, OUTPUT);
        _pin = pin;
        _wireMode = wireMode;
    
@@ -21,6 +20,8 @@ MyRelayBinary::MyRelayBinary(int pin, int wireMode)
   
   void  MyRelayBinary::begin()
   {
+         
+       pinMode(_pin, OUTPUT);
   }
   
    void  MyRelayBinary::on()
