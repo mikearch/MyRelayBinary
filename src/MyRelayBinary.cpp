@@ -11,7 +11,7 @@ Created by Michael S. Tomasik  March 5, 2018
 #include "Arduino.h"
 #include "MyRelayBinary.h"
 
-MyRelayBinary::MyRelayBinary(unit8_t pin, uint8_t wireMode)
+MyRelayBinary::MyRelayBinary(uint8_t pin, uint8_t wireMode)
 {
        _pin = pin;
        _wireMode = wireMode;
