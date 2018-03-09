@@ -13,7 +13,7 @@ Created by Michael S. Tomasik March 5, 2018
 class MyRelayBinary
 {
 	public:
-		MyRelayBinary(int pin, int wireMode);
+		MyRelayBinary(uint8_t pin, uint8_t wireMode);
 		
 		void begin();
 		void on();
@@ -21,7 +21,7 @@ class MyRelayBinary
 		bool status();
 		
 	private:
-		uint(_t _pin;
+		uint8_t _pin;
 		bool _status;
 		uint8_t _wireMode;
 	};
